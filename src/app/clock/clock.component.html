@@ -1,0 +1,11 @@
+<span class="container" [ngClass]="containerClass">
+  <span class="letter">{{time.minutes | stopwatch | splitDigits:0}}</span>
+  <span class="letter">{{time.minutes | stopwatch | splitDigits:1}}</span>
+  <b class="delimiter" [ngClass]="{'blinking': playState}">:</b>
+  <span class="letter">{{time.seconds | stopwatch | splitDigits:0}}</span>
+  <span class="letter">{{time.seconds | stopwatch | splitDigits:1}}</span>
+  <b class="delimiter" [ngClass]="{'blinking': playState}">.</b>
+  <span class="letter">{{time.milliseconds | stopwatch | splitDigits:0}}</span>
+  <span class="letter">{{time.milliseconds | stopwatch | splitDigits:1}}</span>
+</span>
+

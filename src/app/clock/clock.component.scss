@@ -1,0 +1,55 @@
+.display {
+  .letter:after {
+    content: '8';
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    opacity: .4;
+  }
+  .letter {
+    display: inline-block;
+    width: 18px;
+    position: relative;
+    z-index: 2;
+    text-align: right;
+  }
+
+  .delimiter.blinking {
+    animation: blinker 1s linear infinite;
+  }
+}
+
+.letter {
+  font-family: 'Digital7';
+  text-align: right;
+}
+
+.delimiter {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-weight: normal;
+}
+
+
+@keyframes blinker {
+  0% {
+    opacity: 0.0;
+  }
+  20% {
+    opacity: 0.0;
+  }
+  40% {
+    opacity: 0.0;
+  }
+  60% {
+    opacity: 1.0;
+  }
+  80% {
+    opacity: 1.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+
